@@ -28,9 +28,8 @@ public final class GetTopGradeUseCase {
             // Call the API to get the grade for the course for the username
             final Grade[] grades = gradeDataBase.getGrades(username);
             for (Grade grade : grades) {
-
                 if (grade.getCourse().equals(course)) {
-                    // Sum all the grades
+                    // Update current top grade
                     if (grade.getGrade() > max) {
                         max = grade.getGrade();
                     }
